@@ -17,9 +17,22 @@ class Square implements Shapes{
   num get area => pow(side, 2);
 }
 
+// main(){//uncomment this block and comment all below to see normal flow
+//   final circle = Circle(2);
+//   final square = Square(4);
+//   print(circle.area);
+//   print(square.area);
+// }
+
+Shapes shapeFactory(String type){
+  if(type == 'circle') return Circle(2);
+  if(type == 'square') return Square(4);
+  throw 'Can\'t create $type';
+}
+
 main(){
-  final circle = Circle(2);
-  final square = Square(4);
+  final circle = shapeFactory('circle');
+  final square = shapeFactory('square');
   print(circle.area);
   print(square.area);
 }
