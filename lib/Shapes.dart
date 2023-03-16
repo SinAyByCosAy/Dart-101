@@ -24,6 +24,7 @@ class Square implements Shapes{
 //   print(square.area);
 // }
 
+// Option 1
 Shapes shapeFactory(String type){
   if(type == 'circle') return Circle(2);
   if(type == 'square') return Square(4);
@@ -36,3 +37,20 @@ main(){
   print(circle.area);
   print(square.area);
 }
+
+//Option 2
+// abstract class Shapes{//replace the Shapes class above with this one
+//   factory Shapes(String type){
+//     if(type == 'circle') return Circle(2);
+//     if(type == 'square') return Square(4);
+//     throw "Can't create $type";
+//   }
+//   num get area;
+// }
+
+// main(){
+//   final circle = Shapes('circle');
+//   final square = Shapes('square');
+//   print(circle.area);
+//   print(square.area);
+// }
