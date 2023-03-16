@@ -1,3 +1,4 @@
+//learning to create a simple Dart class
 class Bicycle{
   int cadence;
   int speed;

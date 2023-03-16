@@ -1,3 +1,4 @@
+// read-only variables
 class BicycleSpeedPrivate{
   int cadence;
   int _speed =  0; //compiler enforces library privacy for any identifier prefixed with an underscore
